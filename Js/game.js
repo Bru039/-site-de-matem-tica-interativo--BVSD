@@ -10,6 +10,19 @@ function iniciaJogo(modo) {
     novaPergunta();
 }
 
+//função que gera nova pergunta e mostra na tela
+function novaPergunta() {
+    const numeros = gerarNumeros(modoAtual);
+    const operacao = escolherOperacao();
+    const perguntaTexto = '${numeros.num1} ${operacao} ${numeros.num2}';
+
+    respostaCorreta = calcularResposta(numeros.num1, numeros.num2, operacao);
+
+    document.getElementById("pergunta").innerText = perguntaTexto;
+    document.getElementById("resposta").vlue ="";
+    document.getElementById("resultado").innerText = "";
+}
+
 // Gera números aleatórios, maiores no modo desafio
 function geraNumeros(modo) {
     let num1 = Math.floor(Math.random () * 10) + 1;
