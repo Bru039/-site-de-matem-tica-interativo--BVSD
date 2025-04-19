@@ -10,7 +10,7 @@ function iniciaJogo(modo) {
     novaPergunta();
 }
 
-//função que gera nova pergunta e mostra na tela
+//Função que gera nova pergunta e mostra na tela
 function novaPergunta() {
     const numeros = gerarNumeros(modoAtual);
     const operacao = escolherOperacao();
